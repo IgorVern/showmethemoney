@@ -1,0 +1,33 @@
+---
+parser: babel-eslint
+extends: airbnb
+plugins:
+  - react
+  - jsx-a11y
+  - import
+
+rules:
+  react/jsx-filename-extension:
+    - error
+    - extensions:
+      - js
+      - jsx
+  semi:
+    - error
+    - never
+  no-confusing-arrow: off
+  object-curly-spacing: off
+  no-plusplus: off
+  import/prefer-default-export: off
+  no-magic-numbers: warn
+  indent:
+    - error
+    - 2
+  arrow-parens:
+    - error
+    - always
+  max-len:
+    - error
+    - 120  
+env:
+  jest: true
