@@ -4,7 +4,6 @@ import moment from 'moment'
 import PropTypes from 'prop-types'
 
 import {styles} from './styles'
-import {Amount} from './amount'
 
 
 export const Item = (props) => {
@@ -21,7 +20,7 @@ export const Item = (props) => {
     <View style={styles.item}>
       <Text style={styles.text}>{moment(date).format('DD.MM.YYYY')}</Text>
       <Text style={styles.text}>{title}</Text>
-      <Amount value={amount} />
+      <Text style={styles.text}>{amount}</Text>
     </View>
   )
 }
