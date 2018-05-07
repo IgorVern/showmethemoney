@@ -4,11 +4,12 @@ import {Text} from 'react-native'
 import {connect} from 'react-redux'
 
 import {Operations} from './operations'
-import {getOperations} from './redux/modules/operations'
+import {getOperations, addOperation} from './redux/modules/operations'
 
 export class OperationsList extends React.Component {
   static propTypes = {
     getOperations: PropTypes.func.isRequired,
+    addOperation: PropTypes.func.isRequired,
     operations: PropTypes.arrayOf(PropTypes.shape({
       title: PropTypes.string.isRequired,
       date: PropTypes.string.isRequired,
@@ -37,7 +38,7 @@ export class OperationsList extends React.Component {
       return <Text>Error</Text>
     }
     return (
-      <Operations data={operations} />
+      <Operations data={operations} addOperation={this.props.addOperation} />
     )
   }
 }
@@ -50,4 +51,5 @@ const mapStateToProps = (state) => ({
 
 export const Container = connect(mapStateToProps, {
   getOperations,
+  addOperation,
 })(OperationsList)

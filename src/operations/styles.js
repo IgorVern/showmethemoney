@@ -4,7 +4,6 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'flex-start',
-    alignItems: 'stretch',
     padding: 10,
   },
   item: {
@@ -14,5 +13,13 @@ export const styles = StyleSheet.create({
   },
   text: {
     marginLeft: 5,
+  },
+  input: {
+    flexDirection: 'row',
+  },
+  inputItem: {
+    flex: 1,
+  },
+  list: {
   },
 })
